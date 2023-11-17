@@ -1,65 +1,56 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
 body {
-    display: flex;
-    justify-content : center;
-    align-items: center;
-    min-height: 100vh;
-    background: #E3F2FD;
-}
-
-.wrapper {
-    width: 65vmin;
-    height: 70vmin;
-    display: flex;
-    flex-direction: column;
-    background: #293447;
-    border-radius: 4px;
+    margin: 0;
     overflow: hidden;
+    font-family: 'Arial', sans-serif;
 }
 
-
-.game-details {
-    color: #B8C6DC;
-    font-size: 1.2rem;
-    font-weight: 500;
-    padding: 20px 25px;
-    display: flex;
-    justify-content: space-between;
-
+#game-container {
+    position: relative;
+    width: 400px;
+    height: 600px;
+    margin: 50px auto;
+    background-color: #87CEEB;
+    border: 1px solid #000;
+    overflow: hidden; 
+    position: relative; 
 }
 
-.play-board {
-    width: 100%;
-    height: 100%;
-    background: #212837;
-    display: grid;
-    grid-template: repeat(30, 1fr) / repeat(30, 1fr);
-}
-
-.food {
-    background-color: red;
+#bird {
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: #FFD700;
     border-radius: 50%;
 }
-.snake {
-    background-color: yellowgreen;
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 50px;
+    background-color: #228B22;
 }
 
-.controls {
-    display: flex;
-    justify-content: space-between;
+#score {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+    color: #000;
+    z-index: 1;
 }
 
-.controls i {
-    padding: 25px 0;
-    color: #B8C6DC;
+#start-screen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
+}
+
+#start-button {
+    padding: 10px 20px;
+    font-size: 18px;
     cursor: pointer;
-    font-size: 1.3rem;
-    width: calc(100% / 4);
-    border-right: 1px solid #171b26;
 }
